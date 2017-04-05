@@ -16,7 +16,9 @@
             $p2:$(".page2"),
             $p3:$(".page3"),
             $p4:$(".page4"),
-        }
+            $p2_text:$(".page2").find(".text"),
+            $p3_text:$(".page3").find(".text"),
+        },
         this.init();
     };
     about.prototype={
@@ -137,13 +139,13 @@
             var _self = this;
 
             if(this.wheel.dir=="up"){
-                this.ele.$p2.find(".scene-img").addClass("leave_to_Left100");
+                this.ele.$p2.find(".scene-img img").addClass("leave_to_Left100");
                 this.ele.$p2.find(".page-bar").addClass("leave_to_Right100");
                 this.ele.$p2.find(".htitle,.stitle,p").addClass("leave_to_down");
             }
             if(this.wheel.dir=="down"){
                 setTimeout(function(){
-                    _self.ele.$p2.find(".scene-img").addClass("leave_to_Left100");
+                    _self.ele.$p2.find(".scene-img img").addClass("leave_to_Left100");
                     _self.ele.$p2.find(".page-bar").addClass("leave_to_Right100");
                     _self.ele.$p2.find(".htitle,.stitle,p").addClass("fadeOut");
                 },500);
@@ -195,8 +197,8 @@
                             return;
                         }
                         if(EndDom==_self.ele.$p2[0]){//第二页翻页完成，已经准备好第一页动画
-                            _self.ele.$p2.find(".htitle,.stitle,p,.scene-img,.page-bar").css("opacity",0).removeClass("leave_to_down leave_to_Left100 leave_to_Right100");
-                            _self.ele.$p2.removeClass("PagetoDown active");//移除最高层、向下翻页动画
+                            _self.ele.$p2.find(".htitle,.stitle,p,.scene-img img,.page-bar").addClass("opacity").removeClass("leave_to_down leave_to_Left100 leave_to_Right100");
+                            _self.ele.$p2.removeClass("PagetoDown active").addClass("none");//移除最高层、向下翻页动画
                             _self.ele.$p1.addClass("active").removeClass("next");//提层
                             $(".page1-text").addClass("fadeIn");
                             return;
@@ -229,21 +231,40 @@
                             _self.retorep1();//恢复第一页的类，以备反向动画
                             _self.ele.$p2.removeClass("next PagetoUp");
                             _self.ele.$p2.find(".htitle,.stitle,p").addClass("move_from_down");//文字从下往上出现
-                            _self.ele.$p2.find(".scene-img").addClass("move_from_Left100");
+                            _self.ele.$p2.find(".scene-img img").addClass("move_from_Left100");
                             _self.ele.$p2.find(".page-bar").addClass("move_from_Right100");
                             return;
                         }
                         if(EndDom==_self.ele.$p2.find(".htitle")[0]) {//第二页全部结束
                             console.log("page1-page2的动画全部结束");
                             setTimeout(function(){
-                                _self.ele.$p2.find(".htitle,.stitle,p,.scene-img,.page-bar").css("opacity",1).removeClass("move_from_Left100 move_from_down move_from_Right100");
+                                _self.ele.$p2.find(".htitle,.stitle,p,.scene-img img,.page-bar").removeClass("move_from_Left100 move_from_down move_from_Right100 opacity");
                                 _self.isAnimate = false;//动画结束
                                 _self.wheel.now = _self.wheel.next;//更新当前位置
                             },600)
                         }
                         break;
                     case 2://page2去page3
-                        
+                        if(EndDom == _self.ele.$p2_text.find(".htitle")[0]){//page2文字消失
+                            _self.ele.$p3.find(".scene-img img,.page-bar").addClass("move_from_Left100");//page3绿条和图片从左边出现
+                            _self.ele.$p3.find(".htitle,.stitle,p").addClass("move_from_down");//page3文字出现
+                            return;
+                        }
+                        if(EndDom == _self.ele.$p2_text[0]){//page2离开
+                            _self.ele.$p2.removeClass("active bg-color-white").addClass("none");//page2
+                            _self.ele.$p2_text.removeClass("go_to_Up100").find(".htitle").addClass("opacity").removeClass("fadeOut");
+                            _self.ele.$p2_text.find(".stitle,.pragraph p").removeClass("fadeOut").addClass("opacity");
+                            _self.ele.$p2.find(".scene-img img").removeClass("leave_to_Left100");
+                            _self.ele.$p2.find(".page-bar").removeClass("leave_to_Right100");
+                            return;
+                        }
+                        if(EndDom == _self.ele.$p3.find(".htitle")[0]){
+                            _self.ele.$p3_text.removeClass("opacity Page_from_down");
+                            _self.ele.$p3_text.find(".htitle,pragraph p").removeClass("opacity move_from_down");
+                            _self.ele.$p3_text.find(".page-bar,.scene-img img").removeClass("opacity move_from_Left100");
+                            _self.isAnimate = false;//动画结束
+                            _self.wheel.now = _self.wheel.next;
+                        }
                         break;
                     case 3:
                         break;
