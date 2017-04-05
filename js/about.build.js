@@ -34,8 +34,8 @@
                 _self.wheel.now = 2;
                 _self.wheel.next = 3;
             });
-            _iCreative.addEvent("#main",_iCreative.Event.animationStart,_self.PageAStart.bind(_self))//监听下一页动画结束，结束隐藏本页
-            _iCreative.addEvent("#main",_iCreative.Event.animationEnd,_self.PageAEnd.bind(_self))//监听下一页动画结束，结束隐藏本页
+            _iCreative.addEvent("#main",_iCreative.Event.animationStart,_self.PageAStart.bind(_self));//监听下一页动画结束，结束隐藏本页
+            _iCreative.addEvent("#main",_iCreative.Event.animationEnd,_self.PageAEnd.bind(_self));//监听下一页动画结束，结束隐藏本页
         },
 
         ///////////////////////////
@@ -45,6 +45,7 @@
             var mousewheelHandler = function(e){
                 // _iCreative.removeEvent("#main","wheel");
                 if(_self.isAnimate){//如果正在动画，禁止滚轮
+                    console.log("等待动画结束才可继续滚动");
                     return;
                 }
                 var _deltaY = e.originalEvent.deltaY;//Y方向位移
@@ -112,7 +113,13 @@
             this.ele.$p4.addClass("none").removeClass("opacity");//隐藏page4
         },
         p3:function(){
-            this.ele.$p3.removeClass("none");
+
+            if(this.wheel.dir=="up"){
+                console.log("向上")
+            }
+            if(this.wheel.dir=="down"){
+                this.ele.$p3.removeClass("none").addClass("active").find(".text").addClass("Page_from_down");
+            }
         },
         p4:function(){
             $(".page4").removeClass("none");
@@ -127,14 +134,21 @@
         },
         pleave2:function(){
             // $(".page2").addClass("none");
-            this.ele.$p2.find(".scene-img").addClass("leave_to_Left100");
-            this.ele.$p2.find(".page-bar").addClass("leave_to_Right100");
+            var _self = this;
+
             if(this.wheel.dir=="up"){
+                this.ele.$p2.find(".scene-img").addClass("leave_to_Left100");
+                this.ele.$p2.find(".page-bar").addClass("leave_to_Right100");
                 this.ele.$p2.find(".htitle,.stitle,p").addClass("leave_to_down");
             }
             if(this.wheel.dir=="down"){
-                this.ele.$p2.find(".text").addClass("go_to_Up100");
-                this.ele.$p2.find(".htitle,.stitle,p").addClass("fadeOut");
+                setTimeout(function(){
+                    _self.ele.$p2.find(".scene-img").addClass("leave_to_Left100");
+                    _self.ele.$p2.find(".page-bar").addClass("leave_to_Right100");
+                    _self.ele.$p2.find(".htitle,.stitle,p").addClass("fadeOut");
+                },500);
+                this.ele.$p2.find(".text").addClass("go_to_Up100").removeClass("active");
+                this.p3();
             }
 
         },
@@ -229,7 +243,7 @@
                         }
                         break;
                     case 2://page2去page3
-
+                        
                         break;
                     case 3:
                         break;
