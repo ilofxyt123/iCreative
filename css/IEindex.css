@@ -1,0 +1,73 @@
+
+
+.hp{
+    background: #000;
+    z-index: 999;
+    display: none;
+}
+.hp_box{
+    width:40%;
+    position: absolute;
+    left:30%;
+    height:100%;
+}
+.phone {
+    width:50%;
+    position:absolute;
+    left:50%;
+    margin-left:-25%;
+    top:33%;
+
+}
+.hp_tip{
+    width:100%;
+    position:absolute;
+    top:70%;
+}
+
+    #main{width:100%;height:100%;position: relative;background-color:rgba(0,0,0,0);z-index:10}
+            .loading{z-index: 100;}
+            .bgBox{}
+                .bgBox ul#scene{width:100%;height:100%;position: relative;overflow: hidden;opacity: 0.1;}
+                    #scene li{width:100%;height:100%;}
+                        #scene li img{height:80%;position: absolute;}
+                        img.l{top:10%;left:5%;}
+                        img.r{top:10%;right:10%;}
+            .blockBox{z-index: 80}
+                .blockArea{height:100%;width:100%;position: absolute;}
+                    .blockArea .block{width:25%;height:100%;position: absolute;}
+                    .blockArea1 .block{background-color: rgba(1, 74, 212,0.8);}
+                    .blockArea .block1{left:0;}
+                    .blockArea .block2{left:25%;}
+                    .blockArea .block3{left:50%;}
+                    .blockArea .block4{left:75%;}
+
+                    .blockArea2 .block1{background-color:rgba(136,202,30,0.8)}
+                    .blockArea2 .block2{background-color:rgba(136,202,30,0.8)}
+                    .blockArea2 .block3{background-color:rgba(0,0,0,0)}
+                    .blockArea2 .block4{background-color:rgba(0,0,0,0)}
+                .videoBox{position: absolute;top:0;left:0;width:100%;overflow: hidden;height:100%;}
+                    .video{min-width:100%;min-height:100%;}
+
+            .page{z-index: 90;}
+                .index-page{}
+                    .index-text1{position: absolute;left:27%;top:30%;}
+                        .index-text1 strong{font-size:60px;}
+                        .index-text1 p{font-size:16px;}
+                .home-page{}
+                    .home-page-textBox{width:50%;height:100%;position:absolute;left:0;top:0;}
+                        .home-page-text21{font-size:60px;position: absolute;left:12.5%;top:20%;}
+                        .home-page-text22{width:40%;font-size:16px;position: absolute;left:52%;top:36%;line-height:25px;}
+                        .viewmore{position:absolute;width:9.6rem;height:2.5rem;border:solid 2px white;background-color:rgba(0,0,0,0);font-size:2rem;line-height:2.5rem;}
+                .about-page{}
+                .project-page{}
+                .service-page{}
+                .contact-page{}
+            .nav{width:100%;position: fixed;top:5%;z-index: 99;}
+                .nav ul{width:90%;margin:0 auto;position: relative;}
+                    .nav li{height:30px;}
+                    .nav li.l{float:left;margin-left:-30px;}
+                    .nav li.r{float:right;}
+                        .nav li a{display:inline-block;height:30px;font-size:30px;color:white;line-height:30px;cursor:pointer;}
+                        .nav li a.logo{}
+                        .nav li a.r-item{margin-left:10px;font-size:26px;}

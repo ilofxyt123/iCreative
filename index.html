@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="icreative — Digital Create The Future">
+    <meta name="author" content="icreative">
+    <title>i-creative</title>
+    <script>
+        var css;
+        css = '<'+'link '+'href='+"css/common.css?v"+Math.random()+' rel='+"stylesheet "+'type='+"text/css"+'>'
+        document.write(css)
+        css = '<'+'link '+'href='+"css/animate.css?v"+Math.random()+' rel='+"stylesheet "+'type='+"text/css"+'>'
+        document.write(css)
+        css = '<'+'link '+'href='+"css/index.css?v"+Math.random()+' rel='+"stylesheet "+'type='+"text/css"+'>'
+        document.write(css)
+    </script>
+    <style>
+        #main{width:100%;height:100%;position: relative;background-color:rgba(0,0,0,0);z-index:10;overflow: hidden;}
+            .loading{z-index: 100;background-color:white;}
+                .loading img{position: absolute;left:50%;margin-left:-77px;top:50%;margin-top:-77px;}
+            .bgBox{}
+                .mountain{position: absolute;width:100%;}
+                .bgBox .blueBox{position:absolute;left:0;top:0;width:100%;height:100%;overflow: hidden;}
+                .bgBox ul#scene{width:100%;height:100%;position: relative;overflow: hidden;}
+                    #scene li{width:100%;height:100%;}
+                        #scene li img{height:80%;position: absolute;}
+                        img.l{top:10%;left:5%;}
+                        img.r{top:10%;right:10%;}
+            .blockBox{z-index:80}
+                .blockArea{height:100%;width:100%;position: absolute;}
+                    .blockArea .blockLeft{position:absolute;width:50%;height:100%;left:0;}
+                    .blockArea .blockRight{position: absolute;width:50%;height:100%;right:0;}
+                    /*.blockArea1 .block{background-color: rgba(1, 74, 212,0.8);}*/
+                        .blockArea .block{/*width:20%;*/height:100%;position: absolute;}
+                    .blockArea1 .block{background-color: rgba(0, 0, 0,0);}
+                    .blockArea .block1{width:40%;left:0;}
+                    .blockArea .block2{width:40%;left:40%;}
+                    .blockArea .block3{width:20%;left:80%;}
+                    .blockArea .block4{width:20%;left:0;}
+                    .blockArea .block5{width:40%;left:20%;}
+                    .blockArea .block6{width:40%;left:60%;}
+
+                    .blockArea2 .block1{background-color:rgba(136,202,30,0.9)}
+                    .blockArea2 .block2{background-color:rgba(136,202,30,0.9)}
+                    .blockArea2 .block3{background-color:rgba(136,202,30,0.9)}
+                    .blockArea2 .block4{background-color:rgba(0,0,0,0)}
+                    .blockArea2 .block5{background-color:rgba(0,0,0,0)}
+                    .blockArea2 .block6{background-color:rgba(0,0,0,0)}
+
+                    .blockArea3 .block1{background-color:rgba(0,0,0,0)}
+                    .blockArea3 .block2{background-color:rgba(0,0,0,0)}
+                    .blockArea3 .block3{background-color:rgba(0,0,0,0)}
+                    .blockArea3 .block4{background-color:rgba(233,202,73,0.9)}
+                    .blockArea3 .block5{background-color:rgba(233,202,73,0.9)}
+                    .blockArea3 .block6{background-color:rgba(233,202,73,0.9)}
+
+                    .blockArea4 .block1{background-color:rgba(92,188,201,0.9)}
+                    .blockArea4 .block2{background-color:rgba(92,188,201,0.9)}
+                    .blockArea4 .block3{background-color:rgba(92,188,201,0.9)}
+                    .blockArea4 .block4{background-color:rgba(0,0,0,0)}
+                    .blockArea4 .block5{background-color:rgba(0,0,0,0)}
+                    .blockArea4 .block6{background-color:rgba(0,0,0,0)}
+
+                    .blockArea5 .block1{background-color:rgba(0,0,0,0)}
+                    .blockArea5 .block2{background-color:rgba(0,0,0,0)}
+                    .blockArea5 .block3{background-color:rgba(0,0,0,0)}
+                    .blockArea5 .block4{background-color:rgba(242,166,34,0.85)}
+                    .blockArea5 .block5{background-color:rgba(242,166,34,0.85)}
+                    .blockArea5 .block6{background-color:rgba(242,166,34,0.85)}
+
+                    .blockArea6 .block1{background-color:rgba(38,92,220,0.8)}
+                    .blockArea6 .block2{background-color:rgba(38,92,220,0.8)}
+                    .blockArea6 .block3{background-color:rgba(38,92,220,0.8)}
+                    .blockArea6 .block4{background-color:rgba(0,0,0,0)}
+                    .blockArea6 .block5{background-color:rgba(0,0,0,0)}
+                    .blockArea6 .block6{background-color:rgba(0,0,0,0)}
+                .videoBox{position: absolute;top:0;left:0;width:100%;overflow: hidden;height:100%;}
+                    .video{min-width:100%;min-height:100%;}
+
+            .page{z-index: 90;}
+                .index-page{}
+                    .tip{width:60px;height:44px;position: absolute;left:50%;margin-left:-30px;bottom:45px;cursor: pointer;}
+                        .tip .mouse{width:27px;height:43px;background-image: url("images/mouse.png");background-repeat: no-repeat;margin:0 auto;}
+                    .index-text1{position: absolute;left:22%;top:30%;line-height:0.5rem;}
+                        .index-text1 strong{font-size:0.55rem;font-family: bigFont;letter-spacing: 4px;}
+                        .index-text1 p{font-size:0.16rem;line-height:0.25rem;font-family: navFont;}
+                .home-page{}
+                    .pageContent-box{width:50%;height:100%;position:absolute;top:0;overflow:hidden;}/*通用*/
+                        .pageContent-box .title{font-size:0.6rem;position: absolute;}/*通用*/
+                        .pageContent-box .pragraph{width:40%;font-size:0.16rem;position: absolute;line-height:0.3rem;letter-spacing: 1px;}/*通用*/
+                        .btn-viewmore{display:block;width:2rem;height:0.6rem;border:solid 0.02rem white;background-color:rgba(0,0,0,0);font-size:0.2rem;line-height:0.6rem;text-align:center;color:white;margin-top:0.2rem;cursor: pointer;min-width:100px;}/*通用*/
+                    .home-page-textBox{left:0;}
+                        .home-page-text21{left:12.5%;top:20%;}
+                        .home-page-text22{left:1.7rem;top:36%;}
+                        .btn-home:hover{background-color:rgba(255,255,255,1);color:rgba(136,202,30,1);}
+                .about-page{}
+                    .about-page-textBox{right:0;}
+                    .about-page-text21{left:21%;top:20%;}
+                    .about-page-text22{left:3.1rem;top:36%;}
+                    .btn-about:hover{background-color:rgba(255,255,255,1);color:rgba(216,185,69,1);}
+                .project-page{}
+                    .project-page-textBox{left:0;}
+                    .project-page-text21{left:12.5%;top:20%;}
+                    .project-page-text22{left:1.7rem;top:36%;}
+                    .btn-project:hover{background-color:rgba(255,255,255,1);color:rgba(108,188,197,1);}
+                .service-page{}
+                    .service-page-textBox{right:0;}
+                    .service-page-text21{left:21%;top:20%;}
+                    .service-page-text22{left:3.1rem;top:36%;}
+                    .btn-service:hover{background-color:rgba(255,255,255,1);color:rgba(236,165,49,1);}
+                .contact-page{}
+                    .contact-page-textBox{left:0;}
+                    .contact-page-text21{left:12.5%;top:20%;}
+                    .contact-page-text22{left:1.7rem;top:36%;}
+                    .btn-contact:hover{background-color:rgba(255,255,255,1);color:rgba(50,93,197,1);}
+            .Top-nav{width:100%;position: absolute;top:5%;z-index: 99;}
+                .Top-nav ul{width:90%;margin:0 auto;position: relative;font-size:0;overflow: hidden;}
+                    .Top-nav li{height:30px;}
+                    .Top-nav li.l{float:left;}
+                    .Top-nav li.r{float:right;}
+                        .Top-nav li a{display:inline-block;height:30px;color:white;line-height:30px;cursor:pointer;font-family: navFont;}
+                        .Top-nav li a.logo{width:96px;height:23px;background-image:url("images/logo.png");background-repeat: no-repeat;background-position: 0 0;}
+                        .Top-nav li a.r-item{margin-left:0.1rem;font-size:16px;}
+            .Right-nav{width:8px;height:111px;right:10px;position: absolute;top:50%;margin-top:-55px;z-index: 99;}
+                .Right-nav .line{width:36px;height:4px;border-top:solid 2px white;position:absolute;left:-14px;top:5px;}/*5,30,55,80,105*/
+            #testDiv{width:100%;height:2000px;background-color:black}
+    </style>
+</head>
+<body>
+<div id="main">
+
+    <div class="container loading">
+        <img src="images/loaidng.gif">
+    </div><!--z-index100-->
+
+    <div class="container blockBox"><!--z-index80-->
+        <div class="container bgBox none">
+            <div class="blueBox">
+                <img src="images/homebg.jpg" class="blue">
+            </div>
+            <ul id="scene">
+                <!--<li class="layer" data-depth="0.1">-->
+                <!--<img src="images/bg1.png?v6" class="r">-->
+                <!--</li>-->
+                <!--<li class="layer" data-depth="0.1">-->
+                <!--<img src="images/bg2.png?v6" class="l">-->
+                <!--</li>-->
+                <li class="layer" data-depth="0.1">
+                    <canvas id="canvas"></canvas>
+                </li>
+            </ul>
+            <div class="mountain"></div>
+        </div>
+        <div class="blockArea blockArea1 none"><!--INDEX深蓝 -->
+            <div class="blockLeft">
+                <div class="block block1"></div>
+                <div class="block block2"></div>
+                <div class="block block3"></div>
+            </div>
+            <div class="blockRight">
+                <div class="block block4"></div>
+                <div class="block block5"></div>
+                <div class="block block6"></div>
+            </div>
+        </div><!--z-index10-->
+
+        <div class="videoBox home-video none">
+            <video  id="h-video" preload="auto" loop class="video">
+                <source src="video/home.mp4" type="video/mp4">
+            </video>
+        </div><!--z-index9-->
+        <div class="blockArea blockArea2 none"><!--HOME淡绿 -->
+            <div class="blockLeft">
+                <div class="block block1"></div>
+                <div class="block block2"></div>
+                <div class="block block3"></div>
+            </div>
+            <div class="blockRight">
+                <div class="block block4"></div>
+                <div class="block block5"></div>
+                <div class="block block6"></div>
+            </div>
+        </div><!--z-index10-->
+
+        <div class="videoBox about-video none">
+            <video  preload="auto" loop class="video" id="a-video">
+                <source src="video/about.mp4" type="video/mp4">
+            </video>
+        </div><!--z-index9-->
+        <div class="blockArea blockArea3 none"><!--ABOUT淡黄 -->
+            <div class="blockLeft">
+                <div class="block block1"></div>
+                <div class="block block2"></div>
+                <div class="block block3"></div>
+            </div>
+            <div class="blockRight">
+                <div class="block block4"></div>
+                <div class="block block5"></div>
+                <div class="block block6"></div>
+            </div>
+        </div>
+
+        <div class="videoBox project-video none">
+            <video  preload="auto" loop class="video" id="p-video">
+                <source src="video/project.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="blockArea blockArea4 none"><!--PROJECT蓝靛 -->
+            <div class="blockLeft">
+                <div class="block block1"></div>
+                <div class="block block2"></div>
+                <div class="block block3"></div>
+            </div>
+            <div class="blockRight">
+                <div class="block block4"></div>
+                <div class="block block5"></div>
+                <div class="block block6"></div>
+            </div>
+        </div>
+
+        <div class="videoBox service-video none">
+            <video  preload="auto" loop class="video" x-webkit-airplay="true" webkit-playsinline playsinline airplay="allow" x5-video-player-type="h5"  id="s-video">
+                <source src="video/service.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="blockArea blockArea5 none"><!--SERVICE屎黄 -->
+            <div class="blockLeft">
+                <div class="block block1"></div>
+                <div class="block block2"></div>
+                <div class="block block3"></div>
+            </div>
+            <div class="blockRight">
+                <div class="block block4"></div>
+                <div class="block block5"></div>
+                <div class="block block6"></div>
+            </div>
+        </div>
+
+        <div class="videoBox contact-video none">
+            <video  preload="auto" loop class="video" x-webkit-airplay="true" webkit-playsinline playsinline airplay="allow" x5-video-player-type="h5"  id="c-video">
+                <source src="video/contact.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="blockArea blockArea6 none"><!--CONTACT较深蓝 -->
+            <div class="blockLeft">
+                <div class="block block1"></div>
+                <div class="block block2"></div>
+                <div class="block block3"></div>
+            </div>
+            <div class="blockRight">
+                <div class="block block4"></div>
+                <div class="block block5"></div>
+                <div class="block block6"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container page none">
+        <div class="index-page none">
+            <div class="index-text1">
+                <strong>DIGITAL</strong>
+                <br>
+                <strong>INTERACTIVE</strong>
+                <p>CREATIVE & MARKETING & TECHNOLOGY</p>
+            </div>
+            <div class="tip">
+                <div class="mouse"></div>
+            </div>
+        </div>
+
+        <div class="home-page none">
+            <div class="pageContent-box home-page-textBox">
+                <div class="title home-page-text21">
+                    <strong>WHO&nbsp&nbspWE&nbsp&nbspARE&nbsp?</strong>
+                </div>
+                <div class="pragraph home-page-text22">
+                    <p>
+                        iCreative<br>
+                        是一家基于市场、用户和客户的洞察<br>
+                        整合多种创意方式，尤其是互动传播<br>
+                        协助品牌和产品扩大声量的<br>
+                        创意、营销及技术全方位网络广告营销方案解决商
+                    </p>
+                    <br>
+                    <p>
+                        以前沿技术和创新创意<br>
+                        的核心竞争力<br>
+                        专注于为合作伙伴提供<br>
+                        数字互动和内容制作及传递的前沿服务<br>
+                        从而促进合作伙伴的品牌及产品占据市场
+                    </p>
+                    <a class="btn-viewmore btn-home">view more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-page none">
+            <div class="pageContent-box about-page-textBox">
+                <div class="title about-page-text21">
+                    <strong>WHAT&nbsp&nbspWE&nbsp&nbspDO&nbsp?</strong>
+                </div>
+                <div class="pragraph about-page-text22">
+                    <p>
+                        我们提供以下服务<br>
+                        平台运营、HTML5技术开发、移动体验、设计、视频广告<br>
+                    </p>
+                    <br>
+                    <p>
+                        核心优势<br>
+                        多年大客户服务经验、用户洞察与创新创意、沟通一致行动迅<br>
+                        速、持续的高水准产出
+                    </p>
+                    <a class="btn-viewmore btn-about">view more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-page none">
+            <div class="pageContent-box project-page-textBox">
+                <div class="title project-page-text21">
+                    <strong>OUR&nbsp&nbspWORK</strong>
+                </div>
+                <div class="pragraph project-page-text22">
+                    <p>
+                        平台运营<br>
+                        HTML5移动技术开发<br>
+                        移动体验<br>
+                        设计、视频广告<br>
+                    </p>
+                    <br>
+                    <a class="btn-viewmore btn-project">view more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-page none">
+            <div class="pageContent-box service-page-textBox">
+                <div class="title service-page-text21">
+                    <strong>OUR&nbsp&nbspCLIENTS</strong>
+                </div>
+                <div class="pragraph service-page-text22">
+                    <p>
+                        我们提供以下服务<br>
+                        平台运营、HTML5技术开发、移动体验、设计、视频广告<br>
+                    </p>
+                    <br>
+                    <p>
+                        核心优势<br>
+                        多年大客户服务经验、用户洞察与创新创意、沟通一致行动迅<br>
+                        速、持续的高水准产出
+                    </p>
+                    <a class="btn-viewmore btn-service">view more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-page none">
+            <div class="pageContent-box contact-page-textBox">
+                <div class="title contact-page-text21">
+                    <strong>CONTACT&nbsp&nbspUS</strong>
+                </div>
+                <div class="pragraph contact-page-text22">
+                    <p>
+                        Add:浙江省嘉兴市汇丰广场A座602室<br>
+                        Email:davidZHANG@I-CREATIVE.CN<br>
+                        Tel:0573-82086351<br>
+                        WeChat:86090281<br>
+                    </p>
+                    <br>
+                    <a class="btn-viewmore btn-contact">view more</a>
+                </div>
+            </div>
+        </div>
+    </div><!--z-index90-->
+
+    <div class="Top-nav none">
+        <ul>
+            <li class="l">
+                <a href="index.html" class="logo"></a>
+            </li>
+            <li class="r">
+                <a class="r-item r-item1">HOME</a>
+                <a class="r-item r-item2">ABOUT</a>
+                <a class="r-item r-item3">PROJECT</a>
+                <a class="r-item r-item4">SERVICE</a>
+                <a class="r-item r-item5">CONTACT</a>
+            </li>
+        </ul>
+    </div><!--z-index99-->
+    <div class="Right-nav none"><!--z-index99-->
+        <img src="images/in_Right.png">
+        <div class="line"></div>
+    </div><!--z-index99-->
+
+</div>
+
+
+<div class="none hideImg">
+    <!--<img src="images/point.png" id="point">-->
+    <!--<img src="images/point1.png" id="point">-->
+    <img src="images/point2.png" id="point">
+</div>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+
+<script>
+    var js;
+    js = '<' + 'script ' + 'src=' + "js/iCreative.js?v" + Math.random() + '>' + '</' + 'script' + '>'
+    document.write(js)
+    js = '<' + 'script ' + 'src=' + "js/home.build.js?v" + Math.random() + '>' + '</' + 'script' + '>'
+    document.write(js)
+</script>
+</body>
+</html>
