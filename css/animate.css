@@ -168,7 +168,7 @@
     -o-animation-delay: .7s;
     animation-delay: .7s;
 }
-.page2 .move_from_down {
+.move_from_down {
     -webkit-animation:move_from_down 1s cubic-bezier(0,0,0,1) 0s 1 alternate forwards;
     -moz-animation:move_from_down 1s cubic-bezier(0,0,0,1) 0s 1 alternate forwards;
     -ms-animation:move_from_down 1s cubic-bezier(0,0,0,1) 0s 1 alternate forwards;
@@ -462,7 +462,7 @@
     -o-animation:move_from_Left100 1s cubic-bezier(0,0,0,1) 0s 1 alternate forwards;
     animation:move_from_Left100 1s cubic-bezier(0,0,0,1) 0s 1 alternate forwards;
 }
-.page2 .scene-img.move_from_Left100{
+.page2 .scene-img img.move_from_Left100{
     -webkit-animation-delay: .7s;
     -moz-animation-delay: .7s;
     -ms-animation-delay: .7s;
