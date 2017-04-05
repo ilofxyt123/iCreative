@@ -965,11 +965,11 @@
 
 /****************************向上移动100%*****************************/
 .go_to_Up100 {
-    -webkit-animation:go_to_Up100 1s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
-    -moz-animation:go_to_Up100 1s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
-    -ms-animation:go_to_Up100 1s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
-    -o-animation:go_to_Up100 1s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
-    animation:go_to_Up100 1s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
+    -webkit-animation:go_to_Up100 1.5s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
+    -moz-animation:go_to_Up100 1.5s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
+    -ms-animation:go_to_Up100 1.5s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
+    -o-animation:go_to_Up100 1.5s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
+    animation:go_to_Up100 1.5s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
 }
 .page2 .text.go_to_Up100{
 -webkit-animation-duration: 1.4s;
@@ -1019,3 +1019,61 @@ animation-duration: 1.4s;
         transform:translateY(-100%);
     }
 }
+/****************************向上移动100%*****************************/
+
+/****************************从下往上移动整页*****************************/
+.Page_from_down {
+    -webkit-animation:Page_from_down 1.5s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
+    -moz-animation:Page_from_down 1.5s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
+    -ms-animation:Page_from_down 1.5s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
+    -o-animation:Page_from_down 1.5s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
+    animation:Page_from_down 1.5s cubic-bezier(1,0,.24,1) 0s 1 alternate forwards;
+}
+
+@-moz-keyframes Page_from_down{
+    0% {
+        -moz-transform: translateY(100%);
+    }
+    100% {
+        -moz-transform:translateY(0);
+        opacity: 1;
+    }
+
+}
+@-ms-keyframes Page_from_down{
+    0% {
+        -ms-transform:translateY(100%);
+    }
+    100% {
+        -ms-transform:translateY(0);
+        opacity: 1;
+    }
+}
+@-o-keyframes Page_from_down{
+    0% {
+        -o-transform:translateY(100%);
+    }
+    100% {
+        -o-transform:translateY(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes Page_from_down{
+    0% {
+        -webkit-transform:translateY(100%);
+    }
+    100% {
+        -webkit-transform:translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes Page_from_down{
+    0% {
+        transform:translateY(100%);
+    }
+    100% {
+        transform:translateY(0);
+        opacity: 1;
+    }
+}
+/****************************从下往上移动整页*****************************/
