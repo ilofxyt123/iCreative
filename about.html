@@ -16,10 +16,11 @@
     </script>
     <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
     <style>
-        .bg-color-green{background-color:rgba(136,202,30,1)}
-        .bg-color-foot{background-color:rgba(244,244,244,1)}
-        .bg-color-black{background-color:rgba(0,0,0,1)}
-        .bg-color-333{background-color:rgba(51,51,51,1)}
+        .bg-color-green{background-color:rgba(136,202,30,1);}
+        .bg-color-foot{background-color:rgba(244,244,244,1);}
+        .bg-color-black{background-color:rgba(0,0,0,1);}
+        .bg-color-333{background-color:rgba(51,51,51,1);}
+        .bg-color-white{background-color:rgba(255,255,255,1);}
         .color-green{color:rgba(136,202,30,1)}
         .color-3e{color:#3e3e3e;}
         .color-7d{color:#7d7d7d;}
@@ -31,7 +32,7 @@
 
         #main{width:100%;height:100%;position: relative;background-color:rgba(0,0,0,0);z-index:10;overflow: hidden;}
             .pageBox{z-index: 90;}
-                .pageBox .page{position: absolute;width:100%;height:100%;background-color: white;}
+                .pageBox .page{position: absolute;width:100%;height:100%;}
                     .page .blockArea{width:100%;height:100%;position: absolute;}
                         .blockArea .block{width:20%;height:100%;position: absolute;border-right:solid 1px #e6e6e6;}
                         .blockArea .block1{left:0;}
@@ -59,25 +60,24 @@
                             .page2 .text .number{position: absolute;left:0;top:0.5rem;width:0.6rem;height:0.6rem;}
                                 .number .line{position: absolute;left:0;top:0;width:4px;height:100%;}
                                 .number .num{position:absolute;bottom:0;right:0;font-size:0.24rem; }
-                            .page2 .text .htitle{position: absolute;top:1.27rem;line-height: 0.4rem;left:24px;opacity: 0;}
+                            .page2 .text .htitle{position: absolute;top:1.27rem;line-height: 0.4rem;left:24px;}
                                 .text .htitle span{font-size:0.44rem;}
                             .page2 .text .pragraph{position: absolute;top:3rem;left:10px;line-height:0.3rem;}
-                                .pragraph .stitle{font-size:0.2rem;line-height: 0.3rem;height:0.3rem;position: relative;opacity: 0;}
-                                .pragraph p{font-size:0.16rem;opacity: 0;}
+                                .pragraph .stitle{font-size:0.2rem;line-height: 0.3rem;height:0.3rem;position: relative;}
+                                .pragraph p{font-size:0.16rem;}
                             .page2 .text .pic{position: absolute;right:0;top:2.78rem;width:53%;height:5.5rem;overflow: hidden;}
-                                .page2 .text .page-bar{width:74%;height:1.45rem;position: absolute;right:0;top:0;opacity: 0;}
-                                .page2 .text .scene-img{width:63%;position: absolute;left:0;top:1.45rem;opacity: 0;}
+                                .page2 .text .page-bar{width:74%;height:1.45rem;position: absolute;right:0;top:0;}
+                                .page2 .text .scene-img{width:63%;position: absolute;left:0;top:1.45rem;}
                                     .text .scene-img img{width:100%;}
                 .page3{}
                     .page3-textBox{left:0;}
-                        .page3 .text .number{position: absolute;left:49.54%;top:0.5rem;width:0.6rem;height:0.6rem;}
+                        .page3 .text .number{position: absolute;left:49.84%;top:0.5rem;width:0.6rem;height:0.6rem;}
                             .number .line{position: absolute;left:0;top:0;width:4px;height:100%;}
                             .number .num{position:absolute;bottom:0;right:0;font-size:0.24rem; }
                         .page3 .text .htitle{position: absolute;top:1.27rem;line-height: 0.4rem;left:51.75%;}
                             .text .htitle span{font-size:0.44rem;}
                         .page3 .text .pragraph{position: absolute;top:2rem;left:51.75%;line-height:0.3rem;}
                             .pragraph .stitle{font-size:0.2rem;line-height: 0.3rem;height:0.3rem;position: relative;}
-                            .pragraph p{font-size:0.16rem;}
                         .page3 .text .pic{position: absolute;left:0;bottom:0.76rem;width:60%;overflow:hidden;}
                             .page3 .text .page-bar{width:67%;height:0.54rem;position: absolute;left:0;bottom:30px;}
                             .page3 .text .scene-img{width:65%;float:right;}
@@ -96,7 +96,6 @@
                                 .text .htitle span{font-size:0.44rem;}
                             .page4 .text .pragraph{position: absolute;top:2.7rem;left:24px;line-height:0.3rem;}
                                 .pragraph .stitle{font-size:0.2rem;line-height: 0.3rem;height:0.3rem;position: relative;}
-                                .pragraph p{font-size:0.16rem;}
                             .page4 .text .pic{position: absolute;left:0;top:0;width:100%;overflow:hidden;}
                                 .page4 .text .page-bar{width:51%;height:20%;position: absolute;right:33.33%;bottom:0;}
                                 .page4 .text .scene-img{width:33.33%;float:right;}
@@ -167,7 +166,7 @@
             </div><!--遮罩z-index20-->
         </div>
 
-        <div class="page page2 none">
+        <div class="page page2 bg-color-white none">
             <div class="blockArea">
                 <div class="block block1"></div>
                 <div class="block block2"></div>
@@ -182,25 +181,25 @@
                         <span class="line bg-color-green"></span>
                         <span class="num color-green">01</span>
                     </div>
-                    <div class="htitle bigFont color-3e">
+                    <div class="htitle bigFont color-3e opacity">
                         <span>
                             AGENCY<br>
                             PHILOSOPHY
                         </span>
                     </div>
                     <div class="pragraph">
-                        <div class="stitle bigFont color-3e">
+                        <div class="stitle bigFont color-3e opacity">
                             <span class="bg-color-green" style="position: absolute;width:10px;height:10px;left:-15px;top:50%;margin-top:-5px;"></span>
                             ICREATIVE
                         </div>
-                        <p class="color-7d">
+                        <p class="color-7d opacity">
                             是一家基于市场、用户和客户的洞察<br>
                             整合多种创意方式，尤其是互动传播<br>
                             协助品牌和产品扩大声量的<br>
                             创意、营销及技术全方位网络广告营销方案解决商
                         </p>
                         <br>
-                        <p class="color-7d">
+                        <p class="color-7d opacity">
                             以前沿技术和创新创意<br>
                             的核心竞争力<br>
                             专注于为合作伙伴提供<br>
@@ -209,8 +208,8 @@
                         </p>
                     </div>
                     <div class="pic">
-                        <div class="page-bar bg-color-green"></div>
-                        <div class="scene-img">
+                        <div class="page-bar bg-color-green opacity"></div>
+                        <div class="scene-img opacity">
                             <img src="images/ab_1.jpg">
                         </div>
                     </div>
@@ -228,30 +227,30 @@
             </div>
             <div class="page-textBox page3-textBox">
                 <div class="pad"></div>
-                <div class="text">
+                <div class="text opacity">
                     <div class="number navFont">
                         <span class="line bg-color-green"></span>
                         <span class="num color-green">02</span>
                     </div>
-                    <div class="htitle bigFont color-3e">
+                    <div class="htitle bigFont color-3e opacity">
                         <span>
                             CORE ADVANTAGE
                         </span>
                     </div>
                     <div class="pragraph">
-                        <p class="color-7d">
+                        <p class="color-7d opacity">
                             我们提供以下服务：平台运营、HTML5技术开发、<br>
                             移动体验、设计、视频广告<br>
                         </p>
-                        <p class="color-7d">
+                        <p class="color-7d opacity">
                             核心优势<br>
                             多年大客户服务经验、用户洞察与创新创意、沟通<br>
                             一致行动迅速、持续的高水准产出
                         </p>
                     </div>
                     <div class="pic">
-                        <div class="page-bar bg-color-green"></div>
-                        <div class="scene-img">
+                        <div class="page-bar bg-color-green opacity"></div>
+                        <div class="scene-img opacity">
                             <img src="images/ab_2.jpg">
                         </div>
                     </div>
