@@ -14,7 +14,7 @@
     window.onresize = function(){
         setSize();
         f.setPhotoPos();
-    }
+    };
 /////////////////////////////////////////////////////
     var iCreative = function(){
         //待初始化静态变量
@@ -83,6 +83,7 @@
 
         }
     };
+
 //以下是调用上面的函数
     win.iCreative = iCreative;
 })(document,window)

@@ -335,7 +335,7 @@
     /*-o-animation-delay: .1s;*/
     /*animation-delay: .1s;*/
 /*}*/
-.page2 .leave_to_down {
+.leave_to_down {
     -webkit-animation:leave_to_down 1s cubic-bezier(0,0,0,1) 0s 1 alternate forwards;
     -moz-animation:leave_to_down 1s cubic-bezier(0,0,0,1) 0s 1 alternate forwards;
     -ms-animation:leave_to_down 1s cubic-bezier(0,0,0,1) 0s 1 alternate forwards;
